@@ -1,0 +1,253 @@
+/* Hero Section Styles */
+.hero-section {
+    padding: 140px 0 0; /* Top padding = 60 + 80, Bottom = 0 to touch download */
+    margin-top: calc(0px - var(--header-height)); /* Pull up behind header */
+    position: relative;
+    overflow-x: hidden;
+    /* Grid Background Pattern */
+    background-image: 
+        radial-gradient(circle at 0% 100%, var(--color-background-secondary) 20%, transparent 75%),
+        linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
+    background-size: 100% 100%, 80px 80px, 80px 80px;
+    background-repeat: no-repeat, repeat, repeat;
+    background-color: var(--color-background-secondary);
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center; /* Align items to bottom so phones touch the download section */
+    position: relative;
+}
+
+.hero-content {
+    padding-bottom: 0px; /* Increased to balance the bottom alignment */
+    max-width: 540px;
+    z-index: 2;
+}
+
+/* Chip */
+.hero-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--color-white);
+    padding: 8px 20px 8px 8px;
+    border-radius: 100px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    margin-bottom: 24px;
+    font-weight: var(--font-weight-medium);
+    font-size: 1rem;
+    color: var(--color-text-main);
+    position: relative; /* Context for absolute positioning of graphic */
+}
+
+.chip-icon {
+    height: 36px; /* Adjust size to match circle design if SVG has it, or just generic icon size */
+    width: auto;
+}
+
+.chip-graphic {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    height: 35px;
+    width: auto;
+    pointer-events: none;
+}
+
+/* Headline */
+.hero-title {
+    font-size: 3.0rem;
+    line-height: 1.4;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-main);
+    margin-bottom: 24px;
+}
+
+.highlight-text {
+    color: var(--color-secondary);
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-underline-offset: 16px; /* Improves readability */
+    /* position: relative; removed as not needed for text-decoration */
+    /* display: inline-block; removed unless layout requires it, usually span is inline */
+}
+
+
+
+/* Subtext */
+.hero-description {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin-bottom: 32px;
+    font-weight: var(--font-weight-regular);
+    max-width: 490px;
+}
+
+/* Store Buttons */
+.store-buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.store-btn img {
+    height: 50px; /* Adjust based on asset aspect ratio */
+    width: auto;
+    transition: transform 0.2s;
+}
+
+.store-btn:hover img {
+    transform: translateY(-2px);
+}
+
+/* Active Users */
+.active-users {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user-avatars {
+    display: flex;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #D9D9D9; /* Placeholder color */
+    border: 3px solid var(--color-white);
+    margin-left: -16px;
+    overflow: hidden;
+}
+
+.avatar:first-child {
+    margin-left: 0;
+}
+
+.avatar-plus {
+    background-color: #F6F6F6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-main);
+    font-weight: var(--font-weight-medium);
+    font-size: 1.25rem;
+}
+
+.add-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.user-stats h4 {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+    margin-bottom: 4px;
+    color: var(--color-text-main);
+}
+
+.user-stats p {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+}
+
+/* Hero Visuals */
+.hero-visuals {
+    position: relative;
+    /* Ensure image overflows section nicely if needed */
+}
+
+/* Main phone image */
+.hero-phones {
+    width: 100%;
+    height: auto;
+    max-width: 800px; /* Allow it to be slightly larger */
+    display: block;
+    transform: translateX(40px); /* Push slightly right as per design */
+}
+
+/* Decorations */
+.deco-sparkle {
+    position: absolute;
+    z-index: 1;
+    /* Positioning needs tuning based on visual check */
+}
+
+.deco-top-right {
+    top: -40px;
+    right: 50%; /* Adjust */
+}
+
+.deco-bottom-right {
+    bottom: 100px;
+    right: -20px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        padding-top: 40px;
+        text-align: center;
+    }
+
+    .chip-icon {
+    height: 1.733rem; 
+    width: auto;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        font-weight: var(--font-weight-semibold);
+        line-height: 1.4;
+    }
+
+    .highlight-text {
+        color: var(--color-secondary);
+        text-decoration: underline;
+        text-decoration-style: solid;
+        text-underline-offset: 10px; /* Improves readability */
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        font-weight: var(--font-weight-regular);
+        opacity: 0.7;
+        color: var(--color-text-secondary);
+    }
+
+
+    .hero-chip {
+        font-size: 0.826rem;
+    }
+
+    .store-btn img {
+        height: 2.891rem; /* Adjust based on asset aspect ratio */
+        width: auto;
+        transition: transform 0.2s;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .store-buttons {
+        justify-content: center;
+    }
+    
+    .hero-phones {
+        transform: none;
+        max-width: 100%;
+    }
+ 
+}

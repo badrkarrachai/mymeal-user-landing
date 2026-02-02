@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyMeal - Table Reservation App</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/hero.css">
+    <link rel="stylesheet" href="../css/download.css">
+    <link rel="stylesheet" href="../css/how-it-works.css">
+    <link rel="stylesheet" href="../css/features.css">
+    <link rel="stylesheet" href="../css/testimonials.css">
+    <link rel="stylesheet" href="../css/kitchen.css">
+    <link rel="stylesheet" href="../css/restaurant-owner.css">
+    <link rel="stylesheet" href="../css/faq.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="en" href="https://mymeal.com/" />
+    <link rel="alternate" hreflang="fr" href="https://mymeal.com/fr/" />
+</head>
+
+<body>
+
+    <!-- Header / Nav -->
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="../assets/logo.svg" alt="MyMeal Logo" class="logo-img">
+                <span class="logo-text">Mymeal</span>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home" class="active">Accueil</a></li>
+                    <li class="mobile-only"><a href="#download">Télécharger</a></li>
+                    <li><a href="#how-it-works">Comment ça marche</a></li>
+                    <li><a href="#features">Fonctionnalités</a></li>
+                    <li><a href="#testimonials">Témoignages</a></li>
+                    <li><a href="#owners">Propriétaires</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+                <div class="nav-indicator"></div>
+            </nav>
+
+            <a href="#download" class="btn btn-primary">Télécharger l'application</a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-chip">
+                        <img src="../assets/hero-chip-icon.svg" alt="Icon" class="chip-icon">
+                        <span>La Meilleure App de Réservation</span>
+                        <img src="../assets/hero-chip-graphic.svg" alt="" class="chip-graphic">
+                    </div>
+
+                    <h1 class="hero-title">
+                        <span class="highlight-text">Élevez Votre Dîner</span> <br>
+                        avec l'App Mymeal
+                    </h1>
+
+                    <p class="hero-description">
+                        Découvrez les meilleurs restaurants du Maroc. Réservez en quelques clics, des plats marocains
+                        authentiques aux favoris internationaux.
+                    </p>
+
+                    <div class="store-buttons">
+                        <a href="#" class="store-btn">
+                            <img src="../assets/Googleplay-download-button.svg" alt="Disponible sur Google Play">
+                        </a>
+                        <a href="#" class="store-btn">
+                            <img src="../assets/Appstore-download-button.svg" alt="Télécharger sur l'App Store">
+                        </a>
+                    </div>
+
+                    <div class="active-users">
+                        <div class="user-avatars">
+                            <div class="avatar"></div>
+                            <div class="avatar"></div>
+                            <div class="avatar"></div>
+                            <div class="avatar"></div>
+                            <div class="avatar avatar-plus">
+                                <img src="../assets/add.svg" class="add-icon" alt="">
+                            </div>
+                        </div>
+                        <div class="user-stats">
+                            <h4>5M +</h4>
+                            <p>Utilisateurs Actifs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visuals">
+                    <!-- Sparkle Decoration Top -->
+
+                    <!-- Temporarily positioned inline to test -->
+
+                    <img src="../assets/phone-left-and-right-graphics-grouped.png" alt="App Screens"
+                        class="hero-phones">
+
+                    <!-- Decoration Bottom Right (if any asset matches, else skipping for now) -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Download Section -->
+        <section class="download-section" id="download">
+            <div class="container download-container">
+                <div class="download-content">
+                    <h2 class="download-title">Téléchargez Notre App de Réservation Maintenant</h2>
+                    <p class="download-desc">
+                        Profitez de "Miams", notre programme de fidélité, gagnez des points à chaque réservation et
+                        transformez-les en réductions sur votre prochaine réservation.
+                    </p>
+
+                    <div class="download-stats">
+                        <div class="stat-item">
+                            <h3>5 Millions+</h3>
+                            <p>Utilisateurs Actifs</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>8000+</h3>
+                            <p>Restaurants</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Pays</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="download-cards">
+                    <!-- iOS Card -->
+                    <div class="platform-card">
+                        <div>
+                            <h3>Pour iOS</h3>
+                            <div class="platform-ver">iOS 15.6+</div>
+                            <a href="#" class="btn-download">Télécharger</a>
+                        </div>
+                        <div class="card-footer">
+                            <img src="../assets/QR 1.svg" class="qr-code" alt="Scan QR for iOS">
+                        </div>
+                        <div class="platform-icon">
+                            <img src="../assets/apple-logo_white.svg" alt="Apple" class="icon-apple">
+                        </div>
+                    </div>
+
+                    <!-- Android Card -->
+                    <div class="platform-card">
+                        <div>
+                            <h3>Pour Android</h3>
+                            <div class="platform-ver">Android 8.0+</div>
+                            <a href="#" class="btn-download">Télécharger</a>
+                        </div>
+                        <div class="card-footer">
+                            <img src="../assets/QR 2.svg" class="qr-code" alt="Scan QR for Android">
+                        </div>
+                        <div class="platform-icon">
+                            <img src="../assets/Android_white.svg" alt="Android" class="icon-android">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works-section" id="how-it-works">
+            <div class="container">
+                <div class="how-it-works-header">
+                    <span class="how-it-works-label">Comment ça marche</span>
+                    <h2 class="how-it-works-title">
+                        <span class="highlight">Réservations Faciles:</span><br>
+                        Découvrez le Processus
+                    </h2>
+                </div>
+
+                <div class="how-it-works-content">
+                    <!-- Left Image -->
+                    <div class="how-it-works-image-wrapper">
+                        <img src="../assets/how-it-works-left-image.png" alt="How MyMeal Works"
+                            class="how-it-works-img">
+                    </div>
+
+                    <!-- Right Steps -->
+                    <div class="how-it-works-steps">
+                        <!-- Step 1 -->
+                        <div class="step-item">
+                            <div class="step-icon-wrapper">
+                                <img src="../assets/sign-up-icon-how-it-works.svg" alt="S'inscrire" class="step-icon">
+                            </div>
+                            <div class="step-text">
+                                <h3 class="step-title">Inscrivez-vous</h3>
+                                <p class="step-desc">
+                                    Créez votre compte en quelques secondes et accédez à des milliers de restaurants
+                                    exclusifs.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="step-item">
+                            <div class="step-icon-wrapper">
+                                <img src="../assets/explore-restos-icon-how-it-works.svg" alt="Explorer"
+                                    class="step-icon">
+                            </div>
+                            <div class="step-text">
+                                <h3 class="step-title">Explorez les Restaurants</h3>
+                                <p class="step-desc">
+                                    Parcourez les menus, photos et avis pour trouver l'endroit parfait pour votre repas.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="step-item">
+                            <div class="step-icon-wrapper">
+                                <img src="../assets/effort-less-icon-how-it-works.svg" alt="Réservation"
+                                    class="step-icon">
+                            </div>
+                            <div class="step-text">
+                                <h3 class="step-title">Réservation Facile</h3>
+                                <p class="step-desc">
+                                    Choisissez votre date, heure et nombre de personnes, et confirmez instantanément.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="step-item">
+                            <div class="step-icon-wrapper">
+                                <img src="../assets/enjoy-semless-icon-how-it-works.svg" alt="Repas" class="step-icon">
+                            </div>
+                            <div class="step-text">
+                                <h3 class="step-title">Savourez un Repas Parfait</h3>
+                                <p class="step-desc">
+                                    Arrivez au restaurant et profitez de votre repas sans attente ni souci.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section (Moved Here) -->
+        <section class="features-section" id="features">
+            <!-- Full width background box -->
+            <div class="features-bg-box">
+                <div class="container">
+                    <div class="features-header">
+                        <div class="features-title-block">
+                            <div class="features-label">Meilleures Fonctionnalités</div>
+                            <h2 class="features-main-title">
+                                Fonctionnalités Clés de <br>
+                                <span class="highlight">Notre App</span>
+                            </h2>
+                        </div>
+
+                        <div class="features-description-block">
+                            <div class="features-description-divider"></div>
+                            <p class="features-description">
+                                Mymeal vous offre une expérience unique avec des outils puissants pour gérer vos sorties
+                                culinaires en toute simplicité.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cards Container -->
+            <div class="container">
+                <div class="features-cards-container">
+                    <div class="features-grid">
+                        <!-- Card 1 -->
+                        <div class="feature-card">
+                            <div class="feature-card-content">
+                                <h3 class="feature-card-title">Explorez à Proximité</h3>
+                                <p class="feature-card-desc">
+                                    Trouvez les meilleurs restaurants autour de vous en un instant grâce à la
+                                    géolocalisation.
+                                </p>
+                            </div>
+                            <div class="feature-card-image-wrapper">
+                                <img src="../assets/features-section-phone1.png" alt="Explore Nearby Restaurant"
+                                    class="feature-card-img">
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="feature-card card-web">
+                            <div class="feature-card-image-wrapper feature-card-image-wrapper-center">
+                                <img src="../assets/features-section-phone2.png" alt="Secure Your Spot"
+                                    class="feature-card-img">
+                            </div>
+                            <div class="feature-card-content feature-card-content-center">
+                                <h3 class="feature-card-title">Sécurisez votre Place</h3>
+                                <p class="feature-card-desc">
+                                    Réservez votre table garantie à l'avance et évitez les files d'attente inutiles.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 2 mobile-->
+                        <div class="feature-card card-mobile">
+                            <div class="feature-card-content">
+                                <h3 class="feature-card-title">Sécurisez votre Place</h3>
+                                <p class="feature-card-desc">
+                                    Réservez votre table garantie à l'avance et évitez les files d'attente inutiles.
+                                </p>
+                            </div>
+                            <div class="feature-card-image-wrapper">
+                                <img src="../assets/features-section-phone1.png" alt="Explore Nearby Restaurant"
+                                    class="feature-card-img">
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="feature-card">
+                            <div class="feature-card-content">
+                                <h3 class="feature-card-title">Suivez vos Réservations</h3>
+                                <p class="feature-card-desc">
+                                    Gérez toutes vos réservations passées et à venir depuis un seul endroit pratique.
+                                </p>
+                            </div>
+                            <div class="feature-card-image-wrapper">
+                                <img src="../assets/features-section-phone3.png" alt="Track Your Bookings"
+                                    class="feature-card-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kitchen Section -->
+        <section class="kitchen-section">
+            <div class="kitchen-black-bg"></div>
+            <div class="kitchen-green-bar">
+                <div class="container">
+                    <ul class="kitchen-list">
+                        <li class="kitchen-item">Italien</li>
+                        <li class="kitchen-item">Chinois</li>
+                        <li class="kitchen-item">Indien</li>
+                        <li class="kitchen-item active">
+                            Mexicain
+                            <img src="../assets/arrowicon.png" alt="" class="kitchen-active-arrow">
+                        </li>
+                        <li class="kitchen-item">Thaï</li>
+                        <li class="kitchen-item">Américain</li>
+                        <li class="kitchen-item">Japonais</li>
+                        <li class="kitchen-item">Français</li>
+                        <li class="kitchen-item">Libanais</li>
+                        <li class="kitchen-item">Grec</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section" id="testimonials">
+            <div class="container">
+                <div class="testimonials-header">
+                    <span class="testimonials-label">Témoignages</span>
+                    <h2 class="testimonials-title">Ce que disent nos <span class="highlight">Clients</span></h2>
+                </div>
+
+                <div class="testimonials-content">
+                    <!-- Carousel -->
+                    <div class="testimonials-carousel-container" id="testimonial-carousel-container">
+                        <button class="carousel-btn btn-prev" id="btn-prev" aria-label="Previous">
+                            <!-- Left Arrow SVG -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+
+                        <div class="avatars-wrapper" id="testimonial-avatars">
+                            <!-- Avatars will be injected by JS -->
+                        </div>
+
+                        <button class="carousel-btn btn-next" id="btn-next" aria-label="Next">
+                            <!-- Right Arrow SVG -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Active User Info -->
+                    <div class="active-user-info">
+                        <div class="user-name" id="testimonial-name">Shane Lee</div>
+                        <div class="user-role" id="testimonial-role">Satisfied App Users</div>
+                    </div>
+
+                    <!-- Stars -->
+                    <div class="star-rating">
+                        <!-- 5 Stars -->
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                        </svg>
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                        </svg>
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                        </svg>
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                        </svg>
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                        </svg>
+                    </div>
+
+                    <!-- Quote -->
+                    <div class="testimonial-quote-block">
+                        <!-- Background Quotes -->
+                        <img src="../assets/testimonial-cots.svg" class="quote-icon-bg" alt="">
+
+                        <p class="quote-text" id="testimonial-quote">
+                            This app has simplified the way I plan my evenings out. The intuitive design and accurate
+                            information about each restaurant make it easy to find the perfect spot.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Restaurant Owner Section -->
+        <section class="restaurant-owner-section" id="owners">
+            <div class="container">
+                <div class="restaurant-owner-header">
+                    <h2 class="restaurant-owner-title">
+                        <span class="highlight">Vous êtes Propriétaire?</span> Remplissez vos Détails, Un Membre
+                        De Notre Équipe Vous Contactera Bientôt
+                    </h2>
+                    <div class="form-group-title">Info. Personnelle</div>
+                </div>
+
+                <div class="restaurant-owner-form-container">
+                    <form action="#" class="restaurant-form">
+                        <!-- Row 1: Name, Lastname -->
+                        <div class="form-row">
+                            <div class="form-col">
+                                <input type="text" class="form-control" placeholder="Prénom*" required>
+                            </div>
+                            <div class="form-col">
+                                <input type="text" class="form-control" placeholder="Nom*" required>
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Email, Phone -->
+                        <div class="form-row">
+                            <div class="form-col">
+                                <input type="email" class="form-control" placeholder="Adresse Email*" required>
+                            </div>
+                            <div class="form-col">
+                                <input type="tel" class="form-control" placeholder="Téléphone*" required>
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Restaurant Name -->
+                        <div class="form-row">
+                            <div class="form-col">
+                                <input type="text" class="form-control" placeholder="Nom du Restaurant*" required>
+                            </div>
+                        </div>
+
+                        <!-- Row 4: City, Country, Role -->
+                        <div class="form-row">
+                            <div class="form-col">
+                                <input type="text" class="form-control" placeholder="Ville*" required>
+                            </div>
+                            <div class="form-col">
+                                <input type="text" class="form-control" value="Maroc" readonly
+                                    style="background-color: #f9f9f9;">
+                            </div>
+                            <div class="form-col">
+                                <select class="form-control form-select" required>
+                                    <option value="" disabled selected>Rôle*</option>
+                                    <option value="owner">Propriétaire</option>
+                                    <option value="manager">Gérant</option>
+                                    <option value="other">Autre</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Checkboxes -->
+                        <div class="form-checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="terms" required>
+                                <label for="terms" class="checkbox-label">
+                                    En soumettant ce formulaire, j'accepte les <a href="#">Conditions Générales</a>
+                                    et la <a href="#">Politique de Confidentialité</a> de Mymeal.
+                                </label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="marketing">
+                                <label for="marketing" class="checkbox-label">
+                                    J'accepte de recevoir des newsletters et communications marketing de Mymeal. Je
+                                    comprends que je peux me désinscrire à tout moment.
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-submit-container">
+                            <button type="submit" class="btn btn-primary btn-submit">Soumettre</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <div class="faq-header">
+                    <span class="faq-label">FAQ</span>
+                    <h2 class="faq-title">
+                        <span class="highlight">Des Questions?</span> Regardez ici.
+                    </h2>
+                </div>
+
+                <div class="faq-container">
+                    <!-- Item 1 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Comment fonctionne le processus de réservation?</h3>
+                            <div class="faq-icon"></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                <p>
+                                    Explorez simplement les restaurants, choisissez votre créneau horaire préféré et
+                                    confirmez votre réservation en quelques clics. Vous recevrez une confirmation
+                                    instantanée.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 (Active by default example or JS will handle it) -->
+                    <div class="faq-item active">
+                        <div class="faq-question">
+                            <h3>Puis-je ajouter mon restaurant préféré à ma liste de souhaits?</h3>
+                            <div class="faq-icon"></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                <p>
+                                    Oui, appuyez simplement sur l'icône de cœur sur n'importe quel profil de restaurant
+                                    pour l'enregistrer dans vos favoris pour un accès rapide ultérieurement.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Combien de temps à l'avance puis-je réserver?</h3>
+                            <div class="faq-icon"></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                <p>
+                                    Vous pouvez réserver une table jusqu'à 30 jours à l'avance, selon la politique du
+                                    restaurant.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Comment passer à un abonnement premium?</h3>
+                            <div class="faq-icon"></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                <p>
+                                    Allez dans les paramètres de votre profil et sélectionnez "Adhésion". Suivez les
+                                    instructions pour passer à la version supérieure.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Quelles sont les options de paiement?</h3>
+                            <div class="faq-icon"></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                <p>
+                                    Nous acceptons toutes les principales cartes de crédit, Apple Pay et Google Pay.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>L'application est-elle disponible sur iOS et Android?</h3>
+                            <div class="faq-icon"></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-content">
+                                <p>
+                                    Oui, MyMeal est disponible au téléchargement sur l'App Store et Google Play Store.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer CTA & Main Footer -->
+            <footer class="site-footer-wrapper footer-wrapper" style="background-color: #1F1F1F;">
+                <!-- CTA Section -->
+                <div class="footer-cta">
+                    <div class="container">
+                        <div class="footer-cta-box">
+                            <div class="footer-cta-content">
+                                <h2 class="footer-cta-subtitle">Libérez la Joie des Réservations Abordables</h2>
+                                <h1 class="footer-cta-title">Téléchargez l'App Maintenant!</h1>
+                                <p class="footer-cta-desc">
+                                    Rejoignez des millions d'utilisateurs et découvrez la manière la plus simple de
+                                    réserver vos restaurants préférés.
+                                </p>
+                                <div class="footer-store-btns">
+                                    <a href="#" class="footer-store-btn">
+                                        <img src="../assets/Googleplay-download-button.svg"
+                                            alt="Disponible sur Google Play">
+                                    </a>
+                                    <a href="#" class="footer-store-btn">
+                                        <img src="../assets/Appstore-download-button.svg"
+                                            alt="Télécharger sur l'App Store">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Footer -->
+                <div class="site-footer-main">
+                    <div class="container footer-main-container">
+                        <!-- Brand Column -->
+                        <div class="footer-col brand-col">
+                            <div class="footer-brand">
+                                <img src="../assets/logo.svg" alt="Mymeal Logo" class="footer-logo-img">
+                                <span class="footer-brand-name">Mymeal</span>
+                            </div>
+                            <p class="footer-about">
+                                Découvrez une nouvelle façon de vivre la gastronomie. Mymeal connecte les passionnés de
+                                cuisine aux meilleurs restaurants.
+                            </p>
+                            <div class="footer-socials">
+                                <a href="#" class="social-icon">
+                                    <!-- Facebook placeholder -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <!-- Twitter placeholder -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px"
+                                        height="30px">
+                                        <path
+                                            d="M26.37,26l-8.795-12.822l0.015,0.012L25.52,4h-2.65l-6.46,7.48L11.28,4H4.33l8.211,11.971L12.54,15.97L3.88,26h2.65 l7.182-8.322L19.42,26H26.37z M10.23,6l12.34,18h-2.1L8.12,6H10.23z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <img src="../assets/instagram.svg" alt="Instagram">
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <!-- LinkedIn placeholder -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path
+                                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                        </path>
+                                        <rect x="2" y="9" width="4" height="12"></rect>
+                                        <circle cx="4" cy="4" r="2"></circle>
+                                    </svg>
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <!-- Company Column -->
+                        <div class="footer-col">
+                            <h3>Entreprise</h3>
+                            <ul class="footer-links">
+                                <li><a href="#home">Accueil</a></li>
+                                <li><a href="#features">Fonctionnalités</a></li>
+                                <li><a href="#how-it-works">Comment ça marche</a></li>
+                                <li><a href="#testimonials">Témoignages</a></li>
+                                <li><a href="#faq">FAQ</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact Column -->
+                        <div class="footer-col">
+                            <h3>Contact</h3>
+                            <ul class="footer-contact">
+                                <li>+212 661134266</li>
+                                <li>www.mymeal.com</li>
+                                <li>mymeal@gmail.com</li>
+                                <li>56, Rajar Golli, Amborkhana, Sylhet</li>
+                            </ul>
+                        </div>
+
+                        <!-- Newsletter Column -->
+                        <div class="footer-col">
+                            <h3>Recevez les dernières infos</h3>
+                            <form class="newsletter-form">
+                                <input type="email" class="newsletter-input" placeholder="Adresse Email" required>
+                                <button type="submit" class="newsletter-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                    </svg>
+                                </button>
+                            </form>
+
+                            <h3 class="language-title">Langue</h3>
+                            <div class="language-switcher">
+                                <a href="../" class="lang-link">En</a>
+                                <span class="lang-separator"></span>
+                                <a href="#" class="lang-link active">Fr</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container footer-bottom">
+                        <div class="copyright">Copyright © <span id="current-year">2025</span> Mymeal. Tous Droits
+                            Réservés.</div>
+                        <div class="legal-links">
+                            <a href="#">Conditions Générales</a> <span class="legal-separator">|</span> <a
+                                href="#">Politique de Confidentialité</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+    </main>
+
+    <script id="testimonials-data" type="application/json">
+        [
+            {
+                "id": 1,
+                "name": "Sophie Moore",
+                "role": "Blogueuse Culinaire",
+                "quote": "J'adore absolument cette application ! Elle a rendu la découverte de nouveaux restaurants tellement plus facile. Les recommandations sont parfaites.",
+                "image": "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+                "rating": 5
+            },
+            {
+                "id": 2,
+                "name": "John Smith",
+                "role": "Client Fréquent",
+                "quote": "Réserver des tables n'a jamais été aussi simple. J'utilise MyMeal tous les week-ends pour offrir de nouvelles expériences culinaires à ma famille.",
+                "image": "https://i.pravatar.cc/150?u=a042581f4e29026704d",
+                "rating": 5
+            },
+            {
+                "id": 3,
+                "name": "Shane Lee",
+                "role": "Utilisateur Satisfait",
+                "quote": "Cette application a simplifié la façon dont je planifie mes soirées. Le design intuitif et les informations précises sur chaque restaurant facilitent le choix.",
+                "image": "https://i.pravatar.cc/150?u=a042581f4e29026001d",
+                "rating": 5
+            },
+            {
+                "id": 4,
+                "name": "Emily White",
+                "role": "Utilisatrice Vérifiée",
+                "quote": "L'interface est magnifique et conviviale. J'ai découvert tellement de joyaux cachés dans ma ville grâce à MyMeal.",
+                "image": "https://i.pravatar.cc/150?u=a042581f4e29026002d",
+                "rating": 5
+            },
+            {
+                "id": 5,
+                "name": "Michael Brown",
+                "role": "Chef Cuisinier",
+                "quote": "En tant que chef, j'apprécie comment cette application met en valeur les caractéristiques uniques de chaque restaurant. Elle connecte les gourmets à la bonne cuisine.",
+                "image": "https://i.pravatar.cc/150?u=a042581f4e29026003d",
+                "rating": 5
+            }
+        ]
+    </script>
+    <script src="../js/testimonials.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

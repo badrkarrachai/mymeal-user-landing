@@ -1,0 +1,294 @@
+.features-section {
+    position: relative;
+    padding-bottom: 150px;
+    background-color: var(--color-background-secondary);
+}
+
+/* Dark Background Box - Edge to Edge */
+.features-bg-box {
+    background-color: var(--color-text-main);
+    border-radius: 24px;
+    width: 100%;
+    
+    /* Fixed Height for Web */
+    height: 38.625rem;
+    
+    /* Padding adjustments */
+    padding-top: 80px;
+    padding-bottom: 0; /* Removing bottom padding since height is fixed */
+    
+    position: relative;
+    overflow: hidden;
+    color: var(--color-white);
+}
+
+/* Grid Pattern on BG Box */
+.features-bg-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Grid Pattern */
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.083) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.083) 1px, transparent 1px);
+    background-size: 80px 80px;
+    
+    /* Gradual Fade Mask: 100% Left -> 0% Right */
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Header Content inside BG Box */
+.features-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.features-title-block {
+    flex: 1;
+    max-width: 450px;
+}
+
+.features-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 16px;
+    color: var(--color-white);
+}
+
+.features-label::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--color-secondary);
+}
+
+.features-main-title {
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.2;
+}
+
+.features-main-title .highlight {
+    color: var(--color-secondary);
+}
+
+.features-description-block {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.features-description-divider {
+    width: 4px;
+    height: 60px;
+    background-color: var(--color-secondary);
+    flex-shrink: 0;
+}
+
+.features-description {
+    font-size: 1.125rem;
+    font-weight: var(--font-weight-regular);
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+/* Cards Wrapper - Overlapping */
+.features-cards-container {
+    margin-top: -20rem; 
+    /* Web: 38.625rem ~ 618px. Cards start after box. 
+       -160px pulls them up. 
+       Adjust this to fine tune the vertical position relative to the "cut".
+       Standard design usually has card center on edge. 
+       Card height 520px -> half is 260px.
+       -260px would center it perfectly on the edge?
+       Let's stick to a visual approximation or -120 to -160px. 
+       Previous was -120px. 618px - 120 = 498px start. 
+       Let's try -180px for a bit more overlap given fixed height.
+    */
+    position: relative;
+    z-index: 10;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.feature-card {
+    background-color: var(--color-white);
+    border-radius: 24px;
+    overflow: hidden;
+    padding: 0px 24px 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 28.5rem;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-mobile {
+    display: none;
+}
+
+.card-web {
+    display: inline-block;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card-content {
+    margin-bottom: 24px;
+    z-index: 2;
+}
+
+.feature-card-content-center {
+
+    
+    margin-bottom: 32px;
+    order: 2;
+}
+
+.feature-card-title {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-main);
+    margin-bottom: 8px;
+    margin-top: 24px;
+}
+
+.feature-card-desc {
+    font-size: 1rem;
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.feature-card-image-wrapper {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+.feature-card-image-wrapper-center {
+    align-items: flex-start;
+    order: 1;
+    margin-bottom: 0;
+}
+
+.feature-card-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-bottom: -5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+   
+
+    .features-bg-box {
+        padding: 40px 0px;
+        border-radius: 20px;
+        /* Fixed Height for Mobile */
+        height: 95.125rem;
+    }
+    
+    .features-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        /* Ensure container padding is respected via parenting .container or add padding here if stripped */
+        /* .features-bg-box > .container handles horizontal padding */
+    }
+
+    .features-title-block,
+    .features-description-block {
+        max-width: 100%;
+    }
+
+    .features-label {
+        font-size: 1rem;
+        gap: 8px;
+    }
+    
+    .features-label::before {
+        width: 16px;
+    }
+
+    .features-main-title {
+        font-size: 2rem;
+    }
+
+    .features-description {
+        font-size: 1rem;
+    }
+    
+    .features-cards-container {
+        /* Mobile Overlap Logic */
+        /* height 95.125rem ~ 1522px */
+        /* Header takes approx 200px. */
+        /* Remaining bg space ~ 1300px. */
+        /* We want cards to start just below header. */
+        /* So we pull them up by approx (Bg Height - Header Vertical Space) */
+        /* Let's say we pull slightly less than the full height height to leave room for header */
+        /* -85rem is approx 1360px. Leaves ~160px (10rem) for header. */
+        margin-top: -75rem; 
+        padding-bottom: 0px; 
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .feature-card {
+        height: 27.75rem;
+        min-height: auto;
+        padding-bottom: 0;
+    }
+
+    .feature-card-title {
+        font-size: 1.25rem;
+    }
+
+    .feature-card-desc {
+        font-size: 0.938rem;
+    }
+
+    .card-mobile {
+        display: inline-block;
+    }
+
+    .card-web {
+        display: none;
+    }
+}

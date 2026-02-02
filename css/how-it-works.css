@@ -1,0 +1,171 @@
+.how-it-works-section {
+    padding: 100px 0;
+    background-color: var(--color-background);
+    overflow: hidden; /* Ensure content doesn't spill over */
+}
+
+/* Header */
+.how-it-works-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 80px auto;
+}
+
+.how-it-works-label {
+    display: inline-block;
+    font-size: 1.25rem; /* 20px */
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-main);
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 30px;
+}
+
+/* Decorative dash for the label */
+.how-it-works-label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+}
+
+.how-it-works-title {
+    font-size: 2.5rem; /* 40px */
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.2;
+    color: var(--color-text-main);
+}
+
+.how-it-works-title .highlight {
+    color: var(--color-primary);
+}
+
+/* Content Layout */
+.how-it-works-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    justify-content: space-between;
+}
+
+/* Left Image Composition */
+.how-it-works-image-wrapper {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.how-it-works-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* Optional: Add a subtle drop shadow if needed, but keeping it clean for now */
+}
+
+
+/* Right Steps List */
+.how-it-works-steps {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.step-icon-wrapper {
+    flex-shrink: 0;
+    width: 4.375rem; /* 70px */
+    height: 4.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    /* Ensure icon background fits design - user provided svgs might have their own bg or need one */
+    /* Assuming svgs are standalone icons. If they need bg, we might need to add it. 
+       Usually these icons fit in a circle. Let's see the assets. 
+       If they are just paths, I might need a bg. Safest is transparent for now or light gray. */
+}
+
+/* Specific styling for the SVG if needed, but usually image tags work */
+.step-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.step-text {
+    flex: 1;
+}
+
+.step-title {
+    font-size: 1.5rem; /* 24px */
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-main);
+    margin-bottom: 0.5rem;
+}
+
+.step-desc {
+    font-size: 1rem; /* 16px */
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .how-it-works-section {
+        padding: 70px 0;
+    }
+    .how-it-works-content {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .how-it-works-header {
+        margin-bottom: 40px;
+    }
+
+    .how-it-works-title {
+        font-size: 1.6rem;
+    }
+
+    .how-it-works-image-wrapper {
+        width: 100%;
+    }
+
+    .how-it-works-steps {
+        gap: 24px;
+    }
+
+    .step-item {
+        gap: 16px;
+    }
+
+    .step-icon {
+        width: 3.8rem;
+        height: 3.8rem;
+    }
+
+    .step-title {
+        font-size: 1.2rem;
+    }
+
+    .step-desc {
+        font-size: 0.8rem;
+    }
+
+    .how-it-works-steps {
+        width: 100%;
+    }
+}

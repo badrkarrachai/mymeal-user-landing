@@ -1,0 +1,257 @@
+/* Download Section Styles */
+.download-section {
+    background-color: var(--color-primary);
+    padding: 100px; /* Add padding to top and bottom, and 20px side padding to match navbar inset for content */
+    color: var(--color-white);
+    margin-top: 0; /* Spacing handled by hero padding to show grid */
+    border-radius: 24px 24px 24px 24px; /* Rounded top corners like mockup */
+    position: relative;
+    /* Only apply margin max-width to container, but let background span full width? 
+       Actually mockup shows the green section might be contained or full width. 
+       Let's assume full width background, but content contained. 
+       Wait, looking at mockup 1, the green section has rounded corners top Left/Right, 
+       implying it might be a container generic wrapper or body background change.
+       Actually, `uploaded_image_0` shows it as a block with rounded corners at the bottom of the page (or footer).
+       It seems to be a container inside the main flow but wide.
+       Let's make it a full-width background but with border-radius on the container if it's "floating" or just top radius. 
+       Let's stick to full width section with border radius on top.
+    */
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.download-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Left Content */
+.download-content {
+    max-width: 500px;
+}
+
+.download-title {
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.download-desc {
+    font-size: 1.125rem;
+    opacity: 0.8;
+    font-weight: var(--font-weight-regular);
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Stats */
+.download-stats {
+    display: flex;
+    padding-top: 0px;
+}
+
+.stat-item {
+    position: relative;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    border-right: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.stat-item:last-child {
+    padding-right: 0;
+    margin-right: 0;
+    border-right: none;
+}
+
+.stat-item h3 {
+    font-size: 2rem;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 4px;
+}
+
+.stat-item p {
+    font-size: 1.125rem;
+    font-weight: var(--font-weight-regular);
+    color: var(--color-white);
+    opacity: 0.8 ;
+}
+
+/* Right Content - Cards */
+.download-cards {
+    display: flex;
+    gap: 24px;
+}
+
+.platform-card {
+    background-color: var(--color-white);
+    color: var(--color-text-main);
+    border-radius: 20px 20px 0 20px;
+    padding: 24px;
+    width: 17.5rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+}
+
+
+.platform-card h3 {
+   font-size: 1.75rem;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 4px;
+}
+
+.platform-ver {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    font-weight: var(--font-weight-regular);
+    opacity: 0.8;
+    margin-bottom: 16px;
+}
+
+.btn-download {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    padding: 10px 16px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: auto;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+.qr-code {
+    width: 80px;
+    height: 80px;
+}
+
+/* Decorative Circle Icon */
+.platform-icon {
+    width: 7.063rem;
+    height: 7.063rem;
+    background-color: var(--color-primary); /* Use primary green for the circle logic? Actually mockup shows a distinct green circle. */
+    /* Wait, the mockup has the circle with the icon at the bottom right cutting off slightly. */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -17px;
+    right: -17px;
+}
+
+.platform-icon img {
+    width: 3.375rem;
+    height: 3.375rem;
+}
+
+/* Adjustments for specific icons if needed */
+.icon-apple {
+    width: 36px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .download-section {
+        
+        padding: 40px 16px;
+        border-radius: 20px;
+    }
+
+    .download-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .download-content {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .download-stats {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .stat-item {
+        width: 100%;
+        text-align: left;
+        border-right: none;
+        padding-right: 0;
+        margin-right: 0;
+        padding-bottom: 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .stat-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .download-title {
+        font-size: 1.813rem;
+        font-weight: var(--font-weight-semibold);
+        text-align: left;
+    }
+
+    .download-desc {
+        text-align: left;
+        font-size: 1rem;
+        font-weight: var(--font-weight-regular);
+        opacity: 0.8;
+        color: var(--color-white);
+    }
+
+    .stat-item h3 {
+        font-size: 1.5rem;
+        font-weight: var(--font-weight-semibold);
+    }
+
+    .stat-item p {
+        font-size: 1rem;
+        font-weight: var(--font-weight-regular);
+        opacity: 0.8;
+        color: var(--color-white);
+    }
+    
+    .download-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .platform-card {
+        width: 100%;
+        max-width: 320px;
+        text-align: left;
+    }
+
+    .platform-card h3 {
+        font-size: 1.5rem;
+        font-weight: var(--font-weight-semibold);
+    }
+
+    .platform-ver {
+        font-size: 1rem;
+        font-weight: var(--font-weight-regular);
+        opacity: 0.8;
+        margin-bottom: 24px;
+    }
+
+}

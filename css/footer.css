@@ -1,0 +1,518 @@
+/* =========================================
+   Footer CTA Section (Green Download)
+   ========================================= */
+.footer-cta {
+    /* 
+       Transform to move the CTA up by 50% of its own height.
+       This places the visual center of the CTA on the top edge of its parent (the footer).
+       Since it's the first child, it pulls up into the previous section/gap.
+    */
+    transform: translateY(-50%);
+    position: relative;
+    z-index: 10;
+    margin-bottom: -9rem; /* Reduce the large gap created by the transform inside the footer */
+}
+
+.footer-wrapper {
+    margin-top: 18rem;
+}
+
+.footer-cta-box {
+    background-color: var(--color-primary);
+    border-radius: 40px;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Grid Pattern for CTA */
+.footer-cta-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Grid Pattern - White lines with low opacity */
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 80px 80px;
+    
+    mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+    -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+    
+    pointer-events: none;
+    z-index: 0;
+}
+
+.footer-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-cta-subtitle {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 0.5rem;
+    color: var(--color-white);
+}
+
+.footer-cta-title {
+    font-size: 3.25rem;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    color: var(--color-white);
+}
+
+.footer-cta-desc {
+    font-size: 1.125rem;
+    font-weight: var(--font-weight-regular);
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.footer-store-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-store-btn img {
+    width: 12.688rem;
+    height: 3.688rem;
+    object-fit: contain;
+}
+
+/* =========================================
+   Main Footer Section (Dark)
+   ========================================= */
+.site-footer-main {
+    padding-top: 0; /* No top padding needed initially, the CTA space is the gap */
+    padding-bottom: 2rem;
+    position: relative;
+    /* Background color is set inline in HTML or here if moved */
+}
+
+.footer-main-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 4rem;
+    /* We want the footer content to start somewhat closer to the visual bottom of the CTA */
+    /* Visual bottom of CTA is at 50% of CTA height inside this container. */
+    /* Link content starts at 100% of CTA height (logical flow). */
+    /* Gap = 50% CTA height. */
+    /* 50% of ~400px is 200px gap. */
+    /* If we want less gap, negative margin on CTA or grid container helps. */
+    /* The -5rem on .footer-cta helps reduce this gap. */
+}
+
+.footer-col h3 {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 1.5rem;
+    color: var(--color-white);
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo-img {
+    width: 45px; /* Match header logo size */
+    height: 45px;
+    object-fit: contain;
+    /* Adding white background to ensure the green logo is visible on dark footer */
+    
+    border-radius: 50%;
+    padding: 4px; /* Slight padding so the logo doesn't touch edges */
+}
+
+/* Remove old footer-brand-icon styles if no longer used HTML-wise */
+.footer-brand-name {
+    font-size: 1.125rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+}
+
+.footer-brand-name {
+    font-size: 1.125rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+}
+
+.footer-about {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 300px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: var(--color-primary);
+}
+
+.social-icon svg,
+.social-icon img {
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: currentColor;
+    color: white;
+    object-fit: contain;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--color-primary);
+}
+
+.footer-contact li {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 1rem;
+}
+
+/* Newsletter */
+.newsletter-form {
+    display: flex;
+    gap: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px; /* Assuming rounded input */
+    padding: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.newsletter-input {
+    background: none;
+    border: none;
+    padding: 12px 16px;
+    font-size: 1rem;
+    color: var(--color-white);
+    flex-grow: 1;
+    outline: none;
+}
+
+.newsletter-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.newsletter-btn {
+    background-color: var(--color-primary);
+    border: none;
+    width: 48px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.newsletter-btn:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.copyright, .legal-links {
+    font-size: 1rem; /* User said "regular 20 whit" -> 20px = 1.25rem? Or 1rem? Usually 20px is large for copyright. 
+                          But "regular 20 whit" probably means 20px. */
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.legal-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .footer-cta-box {
+        padding: 4rem 1.5rem; /* Increased padding to match screenshot box height/spacing */
+        border-radius: 24px;
+        text-align: center;
+    }
+
+    .footer-cta {
+        margin-bottom: -9rem;
+    }
+
+    .footer-cta-subtitle {
+        font-size: 1rem;
+    }
+
+    .footer-cta-title {
+        font-size: 2rem;
+        font-weight: var(--font-weight-semibold);
+    }
+
+    .footer-cta-desc {
+        font-size: 1rem;
+        padding: 0 10px; /* Slight padding to prevent edge touching */
+    }
+
+    .footer-store-btns {
+        flex-direction: row; /* Match screenshot - side by side buttons */
+        gap: 12px;
+        justify-content: center;
+    }
+    
+    .footer-store-btn img {
+        width: 135px; /* Smaller mobile implementation */
+        height: auto;
+    }
+
+    /* 
+       Mobile Grid Layout Reordering using 'display: contents' on columns 
+       so all children participate in the main grid 
+    */
+    .footer-main-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns for links */
+        gap: 24px;
+        margin-bottom: 2rem;
+        /* Define areas might be trickier if we use display contents, 
+           instead let's rely on auto-placement and order 
+        */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    /* Brand Column Wrapper */
+    .footer-col.brand-col {
+        display: contents; /* Children layout directly in parent? No, flex parent won't work well with contents. Use Grid parent */
+    }
+
+    /* Let's go with a Grid Layout for the container */
+    .footer-main-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-flow: row dense;
+        gap: 32px 20px; /* Row Gap 32, Col Gap 20 */
+    }
+
+    /* Element Ordering & Positioning */
+    
+    /* 1. Brand Logo & Name -> Row 1, Col 1-2 (Full Width) */
+    .footer-brand {
+        grid-column: 1 / -1;
+        order: 1;
+        margin-bottom: 0;
+    }
+
+    /* 2. Brand Description -> Row 2, Col 1-2 (Full Width) */
+    .footer-about {
+        grid-column: 1 / -1;
+        order: 2;
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    /* 3. Company Links -> Row 3, Col 1 */
+    .footer-col:nth-child(2) {
+        order: 3;
+        grid-column: 1 / 2;
+    }
+
+    /* 4. Contact Links -> Row 3, Col 2 */
+    .footer-col:nth-child(3) {
+        order: 4;
+        grid-column: 2 / 3;
+    }
+
+    /* 5. Newsletter -> Row 4, Col 1-2 (Full Width) */
+    .footer-col:nth-last-child(1) {
+        order: 5;
+        grid-column: 1 / -1;
+    }
+
+    /* 6. Social Icons (Inside Brand Col originally) -> Row 5, Col 1-2 (Full Width) */
+    /* Since we set brand-col to display:contents, .footer-socials is a direct grid item now? 
+       Wait, I need to apply display: contents to .footer-col.brand-col specifically.
+    */
+    .footer-col.brand-col {
+        display: contents;
+    }
+    
+    .footer-socials {
+        grid-column: 1 / -1;
+        order: 6;
+        justify-content: flex-start; /* Left align as per screenshot? Or center? Screenshot shows left-ish/center. */
+        margin-top: 1rem;
+        gap: 12px;
+    }
+    
+    /* Adjustments for nested items being grid items now */
+    .footer-brand-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    .footer-brand-name {
+        font-size: 1.25rem;
+    }
+    
+    .footer-col h3 {
+        font-size: 1.125rem;
+        margin-bottom: 1rem; 
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+        padding-top: 24px;
+        gap: 20px;
+    }
+    
+    .copyright {
+        font-size: 1rem; /* Smaller than desktop 1.25rem */
+        line-height: 1.5;
+        opacity: 0.8;
+    }
+    
+    .legal-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+        font-size: 1rem;
+    }
+    
+    .legal-links a {
+        margin: 0;
+        /* margin-right removed, using separator for spacing */
+    }
+    
+    .legal-separator {
+        margin: 0 10px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    /* Add pipe separator via css or keep html? HTML matches standard. */
+    
+    /* Social Icons styling fix for mobile grid context */
+    .social-icon {
+        background-color: rgba(255, 255, 255, 0.1);
+        width: 44px;
+        height: 44px;
+    }
+    
+    /* Newsletter input adjustments */
+    .newsletter-form {
+        width: 100%;
+    }
+    
+    .newsletter-btn {
+        background-color: #5A9352; /* Ensure green matches screenshot */
+    }
+}
+
+/* Language Switcher */
+.language-title {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem !important; /* Override default h3 margin if needed, closer to pills */
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-white);
+}
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 0; /* Handled by title spacing */
+    justify-content: flex-start;
+}
+
+.lang-link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+    font-weight: var(--font-weight-medium);
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.lang-link:hover {
+    color: var(--color-white);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.lang-link.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-weight: var(--font-weight-semibold);
+}
+
+.lang-separator {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .language-switcher {
+        width: 100%;
+        margin-top: 12px;
+    }
+}
